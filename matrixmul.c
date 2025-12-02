@@ -1,4 +1,4 @@
-#define n 10000
+#define n 1000
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -22,11 +22,11 @@ int main(int argc, char **argv)
       }
 
    double start_time = omp_get_wtime();
-
-   for (i = 0; i < n; ++i)
-      for (k = 0; k < n; k++)
-         for (j = 0; j < n; ++j)
-            c[i][j] += a[i][k] * b[k][j];
+   
+   for (i=0; i<n; ++i)
+      for (k=0; k<n; k++)
+         for (j=0; j<n; ++j)
+            c[i][j] += a[i][k]*b[k][j];
 
    double run_time = omp_get_wtime() - start_time;
 
