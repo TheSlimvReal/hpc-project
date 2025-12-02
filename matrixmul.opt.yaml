@@ -1,0 +1,2003 @@
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './matrixmul.c', Line: 11, Column: 22 }
+Function:        main
+Args:
+  - Callee:          malloc
+    DebugLoc:        { File: '/usr/include/stdlib.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: './matrixmul.c', Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './matrixmul.c', Line: 12, Column: 22 }
+Function:        main
+Args:
+  - Callee:          malloc
+    DebugLoc:        { File: '/usr/include/stdlib.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: './matrixmul.c', Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './matrixmul.c', Line: 13, Column: 22 }
+Function:        main
+Args:
+  - Callee:          malloc
+    DebugLoc:        { File: '/usr/include/stdlib.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: './matrixmul.c', Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './matrixmul.c', Line: 22, Column: 21 }
+Function:        main
+Args:
+  - Callee:          omp_get_wtime
+    DebugLoc:        { File: '/opt/intel/oneapi/compiler/2023.2.1/linux/bin-llvm/../compiler/include/omp.h', 
+                       Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: './matrixmul.c', Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './matrixmul.c', Line: 29, Column: 19 }
+Function:        main
+Args:
+  - Callee:          omp_get_wtime
+    DebugLoc:        { File: '/opt/intel/oneapi/compiler/2023.2.1/linux/bin-llvm/../compiler/include/omp.h', 
+                       Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: './matrixmul.c', Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './matrixmul.c', Line: 31, Column: 1 }
+Function:        main
+Args:
+  - Callee:          printf
+    DebugLoc:        { File: '/usr/include/stdio.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: './matrixmul.c', Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './matrixmul.c', Line: 33, Column: 13 }
+Function:        main
+Args:
+  - Callee:          fopen
+    DebugLoc:        { File: '/usr/include/stdio.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: './matrixmul.c', Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './matrixmul.c', Line: 35, Column: 6 }
+Function:        main
+Args:
+  - Callee:          perror
+    DebugLoc:        { File: '/usr/include/stdio.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: './matrixmul.c', Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './matrixmul.c', Line: 39, Column: 3 }
+Function:        main
+Args:
+  - Callee:          fprintf
+    DebugLoc:        { File: '/usr/include/stdio.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: './matrixmul.c', Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './matrixmul.c', Line: 47, Column: 3 }
+Function:        main
+Args:
+  - Callee:          fclose
+    DebugLoc:        { File: '/usr/include/stdio.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: './matrixmul.c', Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './matrixmul.c', Line: 49, Column: 3 }
+Function:        main
+Args:
+  - Callee:          free
+    DebugLoc:        { File: '/usr/include/stdlib.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: './matrixmul.c', Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './matrixmul.c', Line: 50, Column: 3 }
+Function:        main
+Args:
+  - Callee:          free
+    DebugLoc:        { File: '/usr/include/stdlib.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: './matrixmul.c', Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './matrixmul.c', Line: 51, Column: 3 }
+Function:        main
+Args:
+  - Callee:          free
+    DebugLoc:        { File: '/usr/include/stdlib.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: './matrixmul.c', Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './matrixmul.c', Line: 44, Column: 6 }
+Function:        main
+Args:
+  - Callee:          fputc
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: './matrixmul.c', Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './matrixmul.c', Line: 42, Column: 9 }
+Function:        main
+Args:
+  - Callee:          fprintf
+    DebugLoc:        { File: '/usr/include/stdio.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: './matrixmul.c', Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './matrixmul.c', Line: 11, Column: 22 }
+Function:        main
+Args:
+  - Callee:          malloc
+    DebugLoc:        { File: '/usr/include/stdlib.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: './matrixmul.c', Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './matrixmul.c', Line: 12, Column: 22 }
+Function:        main
+Args:
+  - Callee:          malloc
+    DebugLoc:        { File: '/usr/include/stdlib.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: './matrixmul.c', Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './matrixmul.c', Line: 13, Column: 22 }
+Function:        main
+Args:
+  - Callee:          malloc
+    DebugLoc:        { File: '/usr/include/stdlib.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: './matrixmul.c', Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './matrixmul.c', Line: 22, Column: 21 }
+Function:        main
+Args:
+  - Callee:          omp_get_wtime
+    DebugLoc:        { File: '/opt/intel/oneapi/compiler/2023.2.1/linux/bin-llvm/../compiler/include/omp.h', 
+                       Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: './matrixmul.c', Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './matrixmul.c', Line: 29, Column: 19 }
+Function:        main
+Args:
+  - Callee:          omp_get_wtime
+    DebugLoc:        { File: '/opt/intel/oneapi/compiler/2023.2.1/linux/bin-llvm/../compiler/include/omp.h', 
+                       Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: './matrixmul.c', Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './matrixmul.c', Line: 31, Column: 1 }
+Function:        main
+Args:
+  - Callee:          printf
+    DebugLoc:        { File: '/usr/include/stdio.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: './matrixmul.c', Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './matrixmul.c', Line: 33, Column: 13 }
+Function:        main
+Args:
+  - Callee:          fopen
+    DebugLoc:        { File: '/usr/include/stdio.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: './matrixmul.c', Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './matrixmul.c', Line: 35, Column: 6 }
+Function:        main
+Args:
+  - Callee:          perror
+    DebugLoc:        { File: '/usr/include/stdio.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: './matrixmul.c', Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './matrixmul.c', Line: 39, Column: 3 }
+Function:        main
+Args:
+  - Callee:          fprintf
+    DebugLoc:        { File: '/usr/include/stdio.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: './matrixmul.c', Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './matrixmul.c', Line: 47, Column: 3 }
+Function:        main
+Args:
+  - Callee:          fclose
+    DebugLoc:        { File: '/usr/include/stdio.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: './matrixmul.c', Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './matrixmul.c', Line: 49, Column: 3 }
+Function:        main
+Args:
+  - Callee:          free
+    DebugLoc:        { File: '/usr/include/stdlib.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: './matrixmul.c', Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './matrixmul.c', Line: 50, Column: 3 }
+Function:        main
+Args:
+  - Callee:          free
+    DebugLoc:        { File: '/usr/include/stdlib.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: './matrixmul.c', Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './matrixmul.c', Line: 51, Column: 3 }
+Function:        main
+Args:
+  - Callee:          free
+    DebugLoc:        { File: '/usr/include/stdlib.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: './matrixmul.c', Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './matrixmul.c', Line: 44, Column: 6 }
+Function:        main
+Args:
+  - Callee:          fputc
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: './matrixmul.c', Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './matrixmul.c', Line: 42, Column: 9 }
+Function:        main
+Args:
+  - Callee:          fprintf
+    DebugLoc:        { File: '/usr/include/stdio.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: './matrixmul.c', Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './matrixmul.c', Line: 11, Column: 22 }
+Function:        main
+Args:
+  - Callee:          malloc
+    DebugLoc:        { File: '/usr/include/stdlib.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: './matrixmul.c', Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './matrixmul.c', Line: 12, Column: 22 }
+Function:        main
+Args:
+  - Callee:          malloc
+    DebugLoc:        { File: '/usr/include/stdlib.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: './matrixmul.c', Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './matrixmul.c', Line: 13, Column: 22 }
+Function:        main
+Args:
+  - Callee:          malloc
+    DebugLoc:        { File: '/usr/include/stdlib.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: './matrixmul.c', Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './matrixmul.c', Line: 22, Column: 21 }
+Function:        main
+Args:
+  - Callee:          omp_get_wtime
+    DebugLoc:        { File: '/opt/intel/oneapi/compiler/2023.2.1/linux/bin-llvm/../compiler/include/omp.h', 
+                       Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: './matrixmul.c', Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './matrixmul.c', Line: 29, Column: 19 }
+Function:        main
+Args:
+  - Callee:          omp_get_wtime
+    DebugLoc:        { File: '/opt/intel/oneapi/compiler/2023.2.1/linux/bin-llvm/../compiler/include/omp.h', 
+                       Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: './matrixmul.c', Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './matrixmul.c', Line: 31, Column: 1 }
+Function:        main
+Args:
+  - Callee:          printf
+    DebugLoc:        { File: '/usr/include/stdio.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: './matrixmul.c', Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './matrixmul.c', Line: 33, Column: 13 }
+Function:        main
+Args:
+  - Callee:          fopen
+    DebugLoc:        { File: '/usr/include/stdio.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: './matrixmul.c', Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './matrixmul.c', Line: 35, Column: 6 }
+Function:        main
+Args:
+  - Callee:          perror
+    DebugLoc:        { File: '/usr/include/stdio.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: './matrixmul.c', Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './matrixmul.c', Line: 39, Column: 3 }
+Function:        main
+Args:
+  - Callee:          fprintf
+    DebugLoc:        { File: '/usr/include/stdio.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: './matrixmul.c', Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './matrixmul.c', Line: 47, Column: 3 }
+Function:        main
+Args:
+  - Callee:          fclose
+    DebugLoc:        { File: '/usr/include/stdio.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: './matrixmul.c', Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './matrixmul.c', Line: 49, Column: 3 }
+Function:        main
+Args:
+  - Callee:          free
+    DebugLoc:        { File: '/usr/include/stdlib.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: './matrixmul.c', Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './matrixmul.c', Line: 50, Column: 3 }
+Function:        main
+Args:
+  - Callee:          free
+    DebugLoc:        { File: '/usr/include/stdlib.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: './matrixmul.c', Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './matrixmul.c', Line: 51, Column: 3 }
+Function:        main
+Args:
+  - Callee:          free
+    DebugLoc:        { File: '/usr/include/stdlib.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: './matrixmul.c', Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './matrixmul.c', Line: 44, Column: 6 }
+Function:        main
+Args:
+  - Callee:          fputc
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: './matrixmul.c', Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './matrixmul.c', Line: 42, Column: 9 }
+Function:        main
+Args:
+  - Callee:          fprintf
+    DebugLoc:        { File: '/usr/include/stdio.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: './matrixmul.c', Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './matrixmul.c', Line: 11, Column: 22 }
+Function:        main
+Args:
+  - Callee:          malloc
+    DebugLoc:        { File: '/usr/include/stdlib.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: './matrixmul.c', Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './matrixmul.c', Line: 12, Column: 22 }
+Function:        main
+Args:
+  - Callee:          malloc
+    DebugLoc:        { File: '/usr/include/stdlib.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: './matrixmul.c', Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './matrixmul.c', Line: 13, Column: 22 }
+Function:        main
+Args:
+  - Callee:          malloc
+    DebugLoc:        { File: '/usr/include/stdlib.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: './matrixmul.c', Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './matrixmul.c', Line: 22, Column: 21 }
+Function:        main
+Args:
+  - Callee:          omp_get_wtime
+    DebugLoc:        { File: '/opt/intel/oneapi/compiler/2023.2.1/linux/bin-llvm/../compiler/include/omp.h', 
+                       Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: './matrixmul.c', Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './matrixmul.c', Line: 29, Column: 19 }
+Function:        main
+Args:
+  - Callee:          omp_get_wtime
+    DebugLoc:        { File: '/opt/intel/oneapi/compiler/2023.2.1/linux/bin-llvm/../compiler/include/omp.h', 
+                       Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: './matrixmul.c', Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './matrixmul.c', Line: 31, Column: 1 }
+Function:        main
+Args:
+  - Callee:          printf
+    DebugLoc:        { File: '/usr/include/stdio.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: './matrixmul.c', Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './matrixmul.c', Line: 33, Column: 13 }
+Function:        main
+Args:
+  - Callee:          fopen
+    DebugLoc:        { File: '/usr/include/stdio.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: './matrixmul.c', Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './matrixmul.c', Line: 35, Column: 6 }
+Function:        main
+Args:
+  - Callee:          perror
+    DebugLoc:        { File: '/usr/include/stdio.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: './matrixmul.c', Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './matrixmul.c', Line: 39, Column: 3 }
+Function:        main
+Args:
+  - Callee:          fprintf
+    DebugLoc:        { File: '/usr/include/stdio.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: './matrixmul.c', Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './matrixmul.c', Line: 47, Column: 3 }
+Function:        main
+Args:
+  - Callee:          fclose
+    DebugLoc:        { File: '/usr/include/stdio.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: './matrixmul.c', Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './matrixmul.c', Line: 49, Column: 3 }
+Function:        main
+Args:
+  - Callee:          free
+    DebugLoc:        { File: '/usr/include/stdlib.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: './matrixmul.c', Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './matrixmul.c', Line: 50, Column: 3 }
+Function:        main
+Args:
+  - Callee:          free
+    DebugLoc:        { File: '/usr/include/stdlib.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: './matrixmul.c', Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './matrixmul.c', Line: 51, Column: 3 }
+Function:        main
+Args:
+  - Callee:          free
+    DebugLoc:        { File: '/usr/include/stdlib.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: './matrixmul.c', Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './matrixmul.c', Line: 44, Column: 6 }
+Function:        main
+Args:
+  - Callee:          fputc
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: './matrixmul.c', Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './matrixmul.c', Line: 42, Column: 9 }
+Function:        main
+Args:
+  - Callee:          fprintf
+    DebugLoc:        { File: '/usr/include/stdio.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: './matrixmul.c', Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: './matrixmul.c', Line: 17, Column: 9 }
+Function:        main
+Args:
+  - String:          'hoisting '
+  - Inst:            zext
+    DebugLoc:        { File: './matrixmul.c', Line: 17, Column: 9 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: './matrixmul.c', Line: 27, Column: 23 }
+Function:        main
+Args:
+  - String:          'hoisting '
+  - Inst:            zext
+    DebugLoc:        { File: './matrixmul.c', Line: 27, Column: 23 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: './matrixmul.c', Line: 27, Column: 23 }
+Function:        main
+Args:
+  - String:          'hoisting '
+  - Inst:            zext
+    DebugLoc:        { File: './matrixmul.c', Line: 27, Column: 23 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: './matrixmul.c', Line: 27, Column: 23 }
+Function:        main
+Args:
+  - String:          'hoisting '
+  - Inst:            getelementptr
+    DebugLoc:        { File: './matrixmul.c', Line: 27, Column: 23 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: './matrixmul.c', Line: 27, Column: 23 }
+Function:        main
+Args:
+  - String:          'hoisting '
+  - Inst:            load
+    DebugLoc:        { File: './matrixmul.c', Line: 27, Column: 23 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: './matrixmul.c', Line: 27, Column: 23 }
+Function:        main
+Args:
+  - String:          'hoisting '
+  - Inst:            zext
+    DebugLoc:        { File: './matrixmul.c', Line: 27, Column: 23 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: './matrixmul.c', Line: 42, Column: 29 }
+Function:        main
+Args:
+  - String:          'hoisting '
+  - Inst:            zext
+    DebugLoc:        { File: './matrixmul.c', Line: 42, Column: 29 }
+...
+--- !Passed
+Pass:            loop-idiom
+Name:            ProcessLoopStridedStore
+DebugLoc:        { File: './matrixmul.c', Line: 19, Column: 17 }
+Function:        main
+Args:
+  - String:          'Transformed loop-strided store in '
+  - Function:        main
+    DebugLoc:        { File: './matrixmul.c', Line: 8, Column: 0 }
+  - String:          ' function into a call to '
+  - NewFunction:     llvm.memset.p0.i64
+  - String:          '() intrinsic'
+  - FromBlock:       ''
+  - ToBlock:         ''
+...
+--- !Passed
+Pass:            loop-idiom
+Name:            ProcessLoopStridedStore
+DebugLoc:        { File: './matrixmul.c', Line: 19, Column: 17 }
+Function:        main
+Args:
+  - String:          'Transformed loop-strided store in '
+  - Function:        main
+    DebugLoc:        { File: './matrixmul.c', Line: 8, Column: 0 }
+  - String:          ' function into a call to '
+  - NewFunction:     llvm.memset.p0.i64
+  - String:          '() intrinsic'
+  - FromBlock:       ''
+  - ToBlock:         ''
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+Function:        main
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Passed
+Pass:            loop-unroll
+Name:            PartialUnrolled
+DebugLoc:        { File: './matrixmul.c', Line: 16, Column: 6 }
+Function:        main
+Args:
+  - String:          'unrolled loop by a factor of '
+  - UnrollCount:     '10'
+...
+--- !Passed
+Pass:            TTI
+Name:            DontUnroll
+DebugLoc:        { File: './matrixmul.c', Line: 40, Column: 3 }
+Function:        main
+Args:
+  - String:          'advising against unrolling the loop because it contains a '
+  - Call:            call
+    DebugLoc:        { File: './matrixmul.c', Line: 42, Column: 9 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: './matrixmul.c', Line: 27, Column: 30 }
+Function:        main
+Args:
+  - String:          'hoisting '
+  - Inst:            insertelement
+    DebugLoc:        { File: './matrixmul.c', Line: 27, Column: 30 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: './matrixmul.c', Line: 27, Column: 30 }
+Function:        main
+Args:
+  - String:          'hoisting '
+  - Inst:            shufflevector
+    DebugLoc:        { File: './matrixmul.c', Line: 27, Column: 30 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: './matrixmul.c', Line: 27, Column: 30 }
+Function:        main
+Args:
+  - String:          'hoisting '
+  - Inst:            insertelement
+    DebugLoc:        { File: './matrixmul.c', Line: 27, Column: 30 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: './matrixmul.c', Line: 27, Column: 30 }
+Function:        main
+Args:
+  - String:          'hoisting '
+  - Inst:            shufflevector
+    DebugLoc:        { File: './matrixmul.c', Line: 27, Column: 30 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: './matrixmul.c', Line: 27, Column: 30 }
+Function:        main
+Args:
+  - String:          'hoisting '
+  - Inst:            insertelement
+    DebugLoc:        { File: './matrixmul.c', Line: 27, Column: 30 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: './matrixmul.c', Line: 27, Column: 30 }
+Function:        main
+Args:
+  - String:          'hoisting '
+  - Inst:            shufflevector
+    DebugLoc:        { File: './matrixmul.c', Line: 27, Column: 30 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: './matrixmul.c', Line: 27, Column: 30 }
+Function:        main
+Args:
+  - String:          'hoisting '
+  - Inst:            insertelement
+    DebugLoc:        { File: './matrixmul.c', Line: 27, Column: 30 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: './matrixmul.c', Line: 27, Column: 30 }
+Function:        main
+Args:
+  - String:          'hoisting '
+  - Inst:            shufflevector
+    DebugLoc:        { File: './matrixmul.c', Line: 27, Column: 30 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: './matrixmul.c', Line: 27, Column: 30 }
+Function:        main
+Args:
+  - String:          'hoisting '
+  - Inst:            insertelement
+    DebugLoc:        { File: './matrixmul.c', Line: 27, Column: 30 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: './matrixmul.c', Line: 27, Column: 30 }
+Function:        main
+Args:
+  - String:          'hoisting '
+  - Inst:            shufflevector
+    DebugLoc:        { File: './matrixmul.c', Line: 27, Column: 30 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: './matrixmul.c', Line: 27, Column: 30 }
+Function:        main
+Args:
+  - String:          'hoisting '
+  - Inst:            insertelement
+    DebugLoc:        { File: './matrixmul.c', Line: 27, Column: 30 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: './matrixmul.c', Line: 27, Column: 30 }
+Function:        main
+Args:
+  - String:          'hoisting '
+  - Inst:            shufflevector
+    DebugLoc:        { File: './matrixmul.c', Line: 27, Column: 30 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: './matrixmul.c', Line: 27, Column: 30 }
+Function:        main
+Args:
+  - String:          'hoisting '
+  - Inst:            insertelement
+    DebugLoc:        { File: './matrixmul.c', Line: 27, Column: 30 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: './matrixmul.c', Line: 27, Column: 30 }
+Function:        main
+Args:
+  - String:          'hoisting '
+  - Inst:            shufflevector
+    DebugLoc:        { File: './matrixmul.c', Line: 27, Column: 30 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: './matrixmul.c', Line: 27, Column: 30 }
+Function:        main
+Args:
+  - String:          'hoisting '
+  - Inst:            insertelement
+    DebugLoc:        { File: './matrixmul.c', Line: 27, Column: 30 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: './matrixmul.c', Line: 27, Column: 30 }
+Function:        main
+Args:
+  - String:          'hoisting '
+  - Inst:            shufflevector
+    DebugLoc:        { File: './matrixmul.c', Line: 27, Column: 30 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: './matrixmul.c', Line: 27, Column: 30 }
+Function:        main
+Args:
+  - String:          'hoisting '
+  - Inst:            insertelement
+    DebugLoc:        { File: './matrixmul.c', Line: 27, Column: 30 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: './matrixmul.c', Line: 27, Column: 30 }
+Function:        main
+Args:
+  - String:          'hoisting '
+  - Inst:            shufflevector
+    DebugLoc:        { File: './matrixmul.c', Line: 27, Column: 30 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: './matrixmul.c', Line: 27, Column: 30 }
+Function:        main
+Args:
+  - String:          'hoisting '
+  - Inst:            insertelement
+    DebugLoc:        { File: './matrixmul.c', Line: 27, Column: 30 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: './matrixmul.c', Line: 27, Column: 30 }
+Function:        main
+Args:
+  - String:          'hoisting '
+  - Inst:            shufflevector
+    DebugLoc:        { File: './matrixmul.c', Line: 27, Column: 30 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: './matrixmul.c', Line: 27, Column: 30 }
+Function:        main
+Args:
+  - String:          'hoisting '
+  - Inst:            insertelement
+    DebugLoc:        { File: './matrixmul.c', Line: 27, Column: 30 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: './matrixmul.c', Line: 27, Column: 30 }
+Function:        main
+Args:
+  - String:          'hoisting '
+  - Inst:            shufflevector
+    DebugLoc:        { File: './matrixmul.c', Line: 27, Column: 30 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: './matrixmul.c', Line: 27, Column: 30 }
+Function:        main
+Args:
+  - String:          'hoisting '
+  - Inst:            insertelement
+    DebugLoc:        { File: './matrixmul.c', Line: 27, Column: 30 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: './matrixmul.c', Line: 27, Column: 30 }
+Function:        main
+Args:
+  - String:          'hoisting '
+  - Inst:            shufflevector
+    DebugLoc:        { File: './matrixmul.c', Line: 27, Column: 30 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: './matrixmul.c', Line: 27, Column: 30 }
+Function:        main
+Args:
+  - String:          'hoisting '
+  - Inst:            insertelement
+    DebugLoc:        { File: './matrixmul.c', Line: 27, Column: 30 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: './matrixmul.c', Line: 27, Column: 30 }
+Function:        main
+Args:
+  - String:          'hoisting '
+  - Inst:            shufflevector
+    DebugLoc:        { File: './matrixmul.c', Line: 27, Column: 30 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: './matrixmul.c', Line: 27, Column: 30 }
+Function:        main
+Args:
+  - String:          'hoisting '
+  - Inst:            insertelement
+    DebugLoc:        { File: './matrixmul.c', Line: 27, Column: 30 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: './matrixmul.c', Line: 27, Column: 30 }
+Function:        main
+Args:
+  - String:          'hoisting '
+  - Inst:            shufflevector
+    DebugLoc:        { File: './matrixmul.c', Line: 27, Column: 30 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: './matrixmul.c', Line: 27, Column: 30 }
+Function:        main
+Args:
+  - String:          'hoisting '
+  - Inst:            insertelement
+    DebugLoc:        { File: './matrixmul.c', Line: 27, Column: 30 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: './matrixmul.c', Line: 27, Column: 30 }
+Function:        main
+Args:
+  - String:          'hoisting '
+  - Inst:            shufflevector
+    DebugLoc:        { File: './matrixmul.c', Line: 27, Column: 30 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: './matrixmul.c', Line: 27, Column: 30 }
+Function:        main
+Args:
+  - String:          'hoisting '
+  - Inst:            insertelement
+    DebugLoc:        { File: './matrixmul.c', Line: 27, Column: 30 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: './matrixmul.c', Line: 27, Column: 30 }
+Function:        main
+Args:
+  - String:          'hoisting '
+  - Inst:            shufflevector
+    DebugLoc:        { File: './matrixmul.c', Line: 27, Column: 30 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: './matrixmul.c', Line: 27, Column: 23 }
+Function:        main
+Args:
+  - String:          'hoisting '
+  - Inst:            shl
+    DebugLoc:        { File: './matrixmul.c', Line: 27, Column: 23 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: './matrixmul.c', Line: 27, Column: 23 }
+Function:        main
+Args:
+  - String:          'hoisting '
+  - Inst:            add
+    DebugLoc:        { File: './matrixmul.c', Line: 27, Column: 23 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: './matrixmul.c', Line: 15, Column: 3 }
+Function:        main
+Args:
+  - String:          'hoisting '
+  - Inst:            add
+    DebugLoc:        { File: './matrixmul.c', Line: 15, Column: 3 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+Function:        main
+Args:
+  - String:          'hoisting '
+  - Inst:            icmp
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: './matrixmul.c', Line: 15, Column: 3 }
+Function:        main
+Args:
+  - String:          'hoisting '
+  - Inst:            lshr
+    DebugLoc:        { File: './matrixmul.c', Line: 15, Column: 3 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+Function:        main
+Args:
+  - String:          'hoisting '
+  - Inst:            add
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: './matrixmul.c', Line: 15, Column: 3 }
+Function:        main
+Args:
+  - String:          'hoisting '
+  - Inst:            add
+    DebugLoc:        { File: './matrixmul.c', Line: 15, Column: 3 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+Function:        main
+Args:
+  - String:          'hoisting '
+  - Inst:            icmp
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: './matrixmul.c', Line: 15, Column: 3 }
+Function:        main
+Args:
+  - String:          'hoisting '
+  - Inst:            lshr
+    DebugLoc:        { File: './matrixmul.c', Line: 15, Column: 3 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+Function:        main
+Args:
+  - String:          'hoisting '
+  - Inst:            add
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: './matrixmul.c', Line: 15, Column: 3 }
+Function:        main
+Args:
+  - String:          'hoisting '
+  - Inst:            add
+    DebugLoc:        { File: './matrixmul.c', Line: 15, Column: 3 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+Function:        main
+Args:
+  - String:          'hoisting '
+  - Inst:            icmp
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: './matrixmul.c', Line: 15, Column: 3 }
+Function:        main
+Args:
+  - String:          'hoisting '
+  - Inst:            lshr
+    DebugLoc:        { File: './matrixmul.c', Line: 15, Column: 3 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+Function:        main
+Args:
+  - String:          'hoisting '
+  - Inst:            add
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: './matrixmul.c', Line: 15, Column: 3 }
+Function:        main
+Args:
+  - String:          'hoisting '
+  - Inst:            add
+    DebugLoc:        { File: './matrixmul.c', Line: 15, Column: 3 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+Function:        main
+Args:
+  - String:          'hoisting '
+  - Inst:            icmp
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: './matrixmul.c', Line: 15, Column: 3 }
+Function:        main
+Args:
+  - String:          'hoisting '
+  - Inst:            lshr
+    DebugLoc:        { File: './matrixmul.c', Line: 15, Column: 3 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+Function:        main
+Args:
+  - String:          'hoisting '
+  - Inst:            add
+...
+--- !Missed
+Pass:            regalloc
+Name:            LoopSpillReloadCopies
+DebugLoc:        { File: './matrixmul.c', Line: 41, Column: 6 }
+Function:        main
+Args:
+  - NumVRCopies:     '8'
+  - String:          ' virtual registers copies '
+  - TotalCopiesCost: '7.710176e+03'
+  - String:          ' total copies cost '
+  - String:          generated in loop
+...
+--- !Missed
+Pass:            regalloc
+Name:            LoopSpillReloadCopies
+DebugLoc:        { File: './matrixmul.c', Line: 40, Column: 3 }
+Function:        main
+Args:
+  - NumVRCopies:     '9'
+  - String:          ' virtual registers copies '
+  - TotalCopiesCost: '7.740294e+03'
+  - String:          ' total copies cost '
+  - String:          generated in loop
+...
+--- !Missed
+Pass:            regalloc
+Name:            LoopSpillReloadCopies
+DebugLoc:        { File: './matrixmul.c', Line: 26, Column: 9 }
+Function:        main
+Args:
+  - NumReloads:      '1'
+  - String:          ' reloads '
+  - TotalReloadsCost: '4.194360e+08'
+  - String:          ' total reloads cost '
+  - NumFoldedReloads: '4'
+  - String:          ' folded reloads '
+  - TotalFoldedReloadsCost: '1.677744e+09'
+  - String:          ' total folded reloads cost '
+  - String:          generated in loop
+...
+--- !Missed
+Pass:            regalloc
+Name:            LoopSpillReloadCopies
+DebugLoc:        { File: './matrixmul.c', Line: 25, Column: 6 }
+Function:        main
+Args:
+  - NumSpills:       '5'
+  - String:          ' spills '
+  - TotalSpillsCost: '6.553688e+07'
+  - String:          ' total spills cost '
+  - NumReloads:      '1'
+  - String:          ' reloads '
+  - TotalReloadsCost: '4.194360e+08'
+  - String:          ' total reloads cost '
+  - NumFoldedReloads: '4'
+  - String:          ' folded reloads '
+  - TotalFoldedReloadsCost: '1.677744e+09'
+  - String:          ' total folded reloads cost '
+  - String:          generated in loop
+...
+--- !Missed
+Pass:            regalloc
+Name:            LoopSpillReloadCopies
+DebugLoc:        { File: './matrixmul.c', Line: 24, Column: 5 }
+Function:        main
+Args:
+  - NumSpills:       '5'
+  - String:          ' spills '
+  - TotalSpillsCost: '6.553688e+07'
+  - String:          ' total spills cost '
+  - NumReloads:      '1'
+  - String:          ' reloads '
+  - TotalReloadsCost: '4.194360e+08'
+  - String:          ' total reloads cost '
+  - NumFoldedReloads: '5'
+  - String:          ' folded reloads '
+  - TotalFoldedReloadsCost: '1.678154e+09'
+  - String:          ' total folded reloads cost '
+  - NumVRCopies:     '1'
+  - String:          ' virtual registers copies '
+  - TotalCopiesCost: '4.096055e+05'
+  - String:          ' total copies cost '
+  - String:          generated in loop
+...
+--- !Missed
+Pass:            regalloc
+Name:            LoopSpillReloadCopies
+DebugLoc:        { File: './matrixmul.c', Line: 26, Column: 9 }
+Function:        main
+Args:
+  - NumSpills:       '5'
+  - String:          ' spills '
+  - TotalSpillsCost: '6.553688e+07'
+  - String:          ' total spills cost '
+  - NumFoldedSpills: '1'
+  - String:          ' folded spills '
+  - TotalFoldedSpillsCost: '3.276843e+04'
+  - String:          ' total folded spills cost '
+  - NumReloads:      '2'
+  - String:          ' reloads '
+  - TotalReloadsCost: '4.194565e+08'
+  - String:          ' total reloads cost '
+  - NumFoldedReloads: '6'
+  - String:          ' folded reloads '
+  - TotalFoldedReloadsCost: '1.678186e+09'
+  - String:          ' total folded reloads cost '
+  - NumVRCopies:     '2'
+  - String:          ' virtual registers copies '
+  - TotalCopiesCost: '4.423739e+05'
+  - String:          ' total copies cost '
+  - String:          generated in loop
+...
+--- !Missed
+Pass:            regalloc
+Name:            LoopSpillReloadCopies
+DebugLoc:        { File: './matrixmul.c', Line: 25, Column: 6 }
+Function:        main
+Args:
+  - NumSpills:       '8'
+  - String:          ' spills '
+  - TotalSpillsCost: '6.553995e+07'
+  - String:          ' total spills cost '
+  - NumFoldedSpills: '1'
+  - String:          ' folded spills '
+  - TotalFoldedSpillsCost: '3.276843e+04'
+  - String:          ' total folded spills cost '
+  - NumReloads:      '5'
+  - String:          ' reloads '
+  - TotalReloadsCost: '4.194596e+08'
+  - String:          ' total reloads cost '
+  - NumFoldedReloads: '6'
+  - String:          ' folded reloads '
+  - TotalFoldedReloadsCost: '1.678186e+09'
+  - String:          ' total folded reloads cost '
+  - NumVRCopies:     '3'
+  - String:          ' virtual registers copies '
+  - TotalCopiesCost: '4.433979e+05'
+  - String:          ' total copies cost '
+  - String:          generated in loop
+...
+--- !Missed
+Pass:            regalloc
+Name:            LoopSpillReloadCopies
+DebugLoc:        { File: './matrixmul.c', Line: 24, Column: 5 }
+Function:        main
+Args:
+  - NumSpills:       '10'
+  - String:          ' spills '
+  - TotalSpillsCost: '6.554002e+07'
+  - String:          ' total spills cost '
+  - NumFoldedSpills: '2'
+  - String:          ' folded spills '
+  - TotalFoldedSpillsCost: '3.280043e+04'
+  - String:          ' total folded spills cost '
+  - NumReloads:      '7'
+  - String:          ' reloads '
+  - TotalReloadsCost: '4.194596e+08'
+  - String:          ' total reloads cost '
+  - NumFoldedReloads: '6'
+  - String:          ' folded reloads '
+  - TotalFoldedReloadsCost: '1.678186e+09'
+  - String:          ' total folded reloads cost '
+  - NumVRCopies:     '3'
+  - String:          ' virtual registers copies '
+  - TotalCopiesCost: '4.433979e+05'
+  - String:          ' total copies cost '
+  - String:          generated in loop
+...
+--- !Missed
+Pass:            regalloc
+Name:            SpillReloadCopies
+DebugLoc:        { File: './matrixmul.c', Line: 8, Column: 1 }
+Function:        main
+Args:
+  - NumSpills:       '16'
+  - String:          ' spills '
+  - TotalSpillsCost: '6.554002e+07'
+  - String:          ' total spills cost '
+  - NumFoldedSpills: '3'
+  - String:          ' folded spills '
+  - TotalFoldedSpillsCost: '3.280143e+04'
+  - String:          ' total folded spills cost '
+  - NumReloads:      '12'
+  - String:          ' reloads '
+  - TotalReloadsCost: '4.194596e+08'
+  - String:          ' total reloads cost '
+  - NumFoldedReloads: '7'
+  - String:          ' folded reloads '
+  - TotalFoldedReloadsCost: '1.678186e+09'
+  - String:          ' total folded reloads cost '
+  - NumVRCopies:     '19'
+  - String:          ' virtual registers copies '
+  - TotalCopiesCost: '4.511451e+05'
+  - String:          ' total copies cost '
+  - String:          generated in function
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: './matrixmul.c', Line: 8, Column: 0 }
+Function:        main
+Args:
+  - NumStackBytes:   '8888'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: './matrixmul.c', Line: 0, Column: 0 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '41'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: './matrixmul.c', Line: 0, Column: 0 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '3'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: './matrixmul.c', Line: 0, Column: 0 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '28'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: './matrixmul.c', Line: 0, Column: 0 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '5'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: './matrixmul.c', Line: 0, Column: 0 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '11'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: './matrixmul.c', Line: 0, Column: 0 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '8'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: './matrixmul.c', Line: 0, Column: 0 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '20'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: './matrixmul.c', Line: 0, Column: 0 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '5'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: './matrixmul.c', Line: 0, Column: 0 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '14'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: './matrixmul.c', Line: 0, Column: 0 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '6'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: './matrixmul.c', Line: 0, Column: 0 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '16'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: './matrixmul.c', Line: 0, Column: 0 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '5'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: './matrixmul.c', Line: 0, Column: 0 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '9'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: './matrixmul.c', Line: 0, Column: 0 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '3'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: './matrixmul.c', Line: 0, Column: 0 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '4'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: './matrixmul.c', Line: 0, Column: 0 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '2'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: './matrixmul.c', Line: 0, Column: 0 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '5'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: './matrixmul.c', Line: 0, Column: 0 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '23'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: './matrixmul.c', Line: 0, Column: 0 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '31'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: './matrixmul.c', Line: 0, Column: 0 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '5'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: './matrixmul.c', Line: 0, Column: 0 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '11'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: './matrixmul.c', Line: 0, Column: 0 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '9'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: './matrixmul.c', Line: 0, Column: 0 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '1'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: './matrixmul.c', Line: 0, Column: 0 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '43'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: './matrixmul.c', Line: 0, Column: 0 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '7'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: './matrixmul.c', Line: 0, Column: 0 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '9'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: './matrixmul.c', Line: 0, Column: 0 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '8'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: './matrixmul.c', Line: 35, Column: 6 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '4'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: './matrixmul.c', Line: 8, Column: 0 }
+Function:        main
+Args:
+  - NumInstructions: '336'
+  - String:          ' instructions in function'
+...

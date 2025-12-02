@@ -1,0 +1,149 @@
+Global optimization report for : main
+
+LOOP BEGIN at ./matrixmul.c (16, 6)
+    remark #25567: 2 loops have been collapsed
+    remark #15300: LOOP WAS VECTORIZED
+    remark #15305: vectorization support: vector length 4
+    remark #15475: --- begin vector loop cost summary ---
+    remark #15476: scalar cost: 4.000000 
+    remark #15477: vector cost: 1.937500 
+    remark #15478: estimated potential speedup: 2.062500 
+    remark #15309: vectorization support: normalized vectorization overhead 0.000000
+    remark #15570: using scalar loop trip count: 100000000
+    remark #15482: vectorized math library calls: 0 
+    remark #15484: vector function calls: 0 
+    remark #15485: serialized function calls: 0
+    remark #15488: --- end vector loop cost summary ---
+    remark #15447: --- begin vector loop memory reference summary ---
+    remark #15450: unmasked unaligned unit stride loads: 0 
+    remark #15451: unmasked unaligned unit stride stores: 2 
+    remark #15456: masked unaligned unit stride loads: 0 
+    remark #15457: masked unaligned unit stride stores: 0 
+    remark #15458: masked indexed (or gather) loads: 0 
+    remark #15459: masked indexed (or scatter) stores: 0 
+    remark #15462: unmasked indexed (or gather) loads: 0 
+    remark #15463: unmasked indexed (or scatter) stores: 0 
+    remark #15554: Unmasked VLS-optimized loads (each part of the group counted separately): 0
+    remark #15555: Masked VLS-optimized loads (each part of the group counted separately): 0
+    remark #15556: Unmasked VLS-optimized stores (each part of the group counted separately): 0
+    remark #15557: Masked VLS-optimized stores (each part of the group counted separately): 0
+    remark #15497: vector compress: 0 
+    remark #15498: vector expand: 0 
+    remark #15474: --- end vector loop memory reference summary ---
+LOOP END
+
+LOOP BEGIN at ./matrixmul.c (24, 5)
+    remark #15553: loop was not vectorized: outer loop is not an auto-vectorization candidate.
+
+    LOOP BEGIN at ./matrixmul.c (25, 6)
+        remark #15553: loop was not vectorized: outer loop is not an auto-vectorization candidate.
+
+        LOOP BEGIN at ./matrixmul.c (26, 9)
+            remark #15553: loop was not vectorized: outer loop is not an auto-vectorization candidate.
+
+            LOOP BEGIN at ./matrixmul.c (24, 5)
+                remark #25566: blocked by 64
+                remark #25540: Loop unrolled and jammed by 4
+                remark #15553: loop was not vectorized: outer loop is not an auto-vectorization candidate.
+
+                LOOP BEGIN at ./matrixmul.c (25, 6)
+                    remark #25566: blocked by 64
+                    remark #25540: Loop unrolled and jammed by 4
+                    remark #15553: loop was not vectorized: outer loop is not an auto-vectorization candidate.
+
+                    LOOP BEGIN at ./matrixmul.c (26, 9)
+                        remark #25566: blocked by 64
+                        remark #25563: Load hoisted out of the loop
+                        remark #15300: LOOP WAS VECTORIZED
+                        remark #15305: vectorization support: vector length 4
+                        remark #15475: --- begin vector loop cost summary ---
+                        remark #15476: scalar cost: 83.000000 
+                        remark #15477: vector cost: 24.500000 
+                        remark #15478: estimated potential speedup: 3.375000 
+                        remark #15309: vectorization support: normalized vectorization overhead 0.078125
+                        remark #15482: vectorized math library calls: 0 
+                        remark #15484: vector function calls: 0 
+                        remark #15485: serialized function calls: 0
+                        remark #15488: --- end vector loop cost summary ---
+                        remark #15447: --- begin vector loop memory reference summary ---
+                        remark #15450: unmasked unaligned unit stride loads: 32 
+                        remark #15451: unmasked unaligned unit stride stores: 16 
+                        remark #15456: masked unaligned unit stride loads: 0 
+                        remark #15457: masked unaligned unit stride stores: 0 
+                        remark #15458: masked indexed (or gather) loads: 0 
+                        remark #15459: masked indexed (or scatter) stores: 0 
+                        remark #15462: unmasked indexed (or gather) loads: 0 
+                        remark #15463: unmasked indexed (or scatter) stores: 0 
+                        remark #15554: Unmasked VLS-optimized loads (each part of the group counted separately): 0
+                        remark #15555: Masked VLS-optimized loads (each part of the group counted separately): 0
+                        remark #15556: Unmasked VLS-optimized stores (each part of the group counted separately): 0
+                        remark #15557: Masked VLS-optimized stores (each part of the group counted separately): 0
+                        remark #15497: vector compress: 0 
+                        remark #15498: vector expand: 0 
+                        remark #15474: --- end vector loop memory reference summary ---
+                        remark #25583: Number of Array Refs Scalar Replaced In Loop: 36
+                    LOOP END
+
+                    LOOP BEGIN at ./matrixmul.c (26, 9)
+                    <Remainder loop for vectorization>
+                        remark #25583: Number of Array Refs Scalar Replaced In Loop: 36
+                    LOOP END
+                LOOP END
+            LOOP END
+        LOOP END
+    LOOP END
+LOOP END
+
+LOOP BEGIN at ./matrixmul.c (40, 3)
+    remark #15553: loop was not vectorized: outer loop is not an auto-vectorization candidate.
+
+    LOOP BEGIN at ./matrixmul.c (41, 6)
+        remark #15527: Loop was not vectorized: function call to  cannot be vectorized
+        remark #25438: Loop unrolled without remainder by 8
+    LOOP END
+LOOP END
+=================================================================
+
+---- Begin Inlining Report ----
+Option Values:
+  inline-threshold: 225
+  inlinehint-threshold: 325
+  inlinecold-threshold: 45
+  inlineoptsize-threshold: 15
+
+DEAD STATIC FUNC: fwrite
+
+COMPILE FUNC: main
+   -> EXTERN: malloc ./matrixmul.c (11,22)
+   -> EXTERN: malloc ./matrixmul.c (12,22)
+   -> DELETE: malloc ./matrixmul.c (13,22)
+   -> EXTERN: omp_get_wtime ./matrixmul.c (22,21)
+   -> EXTERN: omp_get_wtime ./matrixmul.c (29,19)
+   -> EXTERN: printf ./matrixmul.c (31,1)
+   -> EXTERN: fopen ./matrixmul.c (33,13)
+   -> EXTERN: perror ./matrixmul.c (35,6)
+   -> EXTERN: fprintf ./matrixmul.c (39,3)
+   -> EXTERN: fclose ./matrixmul.c (47,3)
+   -> EXTERN: free ./matrixmul.c (49,3)
+   -> EXTERN: free ./matrixmul.c (50,3)
+   -> EXTERN: free ./matrixmul.c (51,3)
+   -> DELETE: fprintf ./matrixmul.c (44,6)
+   -> DELETE: fprintf ./matrixmul.c (42,9)
+   -> DELETE: fputc ./matrixmul.c (44,6)
+   -> EXTERN: fprintf ./matrixmul.c (42,9)
+   -> EXTERN: fprintf ./matrixmul.c (42,9)
+   -> EXTERN: fprintf ./matrixmul.c (42,9)
+   -> EXTERN: fprintf ./matrixmul.c (42,9)
+   -> EXTERN: fprintf ./matrixmul.c (42,9)
+   -> EXTERN: fprintf ./matrixmul.c (42,9)
+   -> EXTERN: fprintf ./matrixmul.c (42,9)
+   -> EXTERN: fprintf ./matrixmul.c (42,9)
+   -> EXTERN: fputc ./matrixmul.c (44,6)
+   -> EXTERN: calloc ./matrixmul.c (13,22)
+   -> EXTERN: __libirc_nontemporal_store ./matrixmul.c (17,17)
+   -> EXTERN: __libirc_nontemporal_store ./matrixmul.c (18,17)
+   -> EXTERN: __libirc_nontemporal_store ./matrixmul.c (15,3)
+   -> EXTERN: __libirc_nontemporal_store ./matrixmul.c (15,3)
+   -> llvm.x86.sse.sfence ./matrixmul.c (15,3)
+
+---- End Inlining Report ------
