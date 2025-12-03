@@ -23,10 +23,10 @@ int main(int argc, char **argv)
 
    double start_time = omp_get_wtime();
 
-   #pragma omp parallel for
-   for (i = 0; i < n; ++i)
+   #pragma omp parallel for default(none) private(i, j, k) firstprivate(a, b, c)
+   for (i = 0; i < n; i++)
       for (k = 0; k < n; k++)
-         for (j = 0; j < n; ++j)
+         for (j = 0; j < n; j++)
             c[i][j] += a[i][k] * b[k][j];
 
    double run_time = omp_get_wtime() - start_time;

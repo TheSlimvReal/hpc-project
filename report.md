@@ -9,6 +9,11 @@ Compile on mac:
  - [ ] Test linear
  - [ ] Test aligned + report
  - [ ] Test linear aligned + report
+ - [ ] Test parallel for
+ - [ ] Test parallel for + default(none)...
+ - [ ] Compare firstprivate(a,b,c) with shared(a,b,c)
+ - [ ] Redo test on varying cores with best approach
+ - [ ] Run best setup with different sizes for problem. 
 
 # Exam
 
@@ -56,11 +61,11 @@ TODO just inline speedup!
 parallel
 
 ```C
-     #pragma omp parallel for 
-    for (i=0; i<n; ++i)
-     for (k=0; k<n; k++)
-        for (j=0; j<n; ++j)
-           c[i][j] += a[i][k]*b[k][j];
+#pragma omp parallel for 
+for (i=0; i<n; ++i)
+   for (k=0; k<n; k++)
+      for (j=0; j<n; ++j)
+         c[i][j] += a[i][k]*b[k][j];
 ```
 
 | serial | 42 |
@@ -70,3 +75,16 @@ parallel
 | 16 | 7.36 |
 | 20 | 7.22 |
 | 40 | 7.46 |
+
+big improvement for 
+
+```C
+#pragma omp parallel for default(none) private(i, j, k) shared(a, b, c)
+```
+TODO times:
+---
+Even faster
+
+```C
+#pragma omp parallel for default(none) private(i, j, k) firstprivate(a, b) shared(c)
+```
