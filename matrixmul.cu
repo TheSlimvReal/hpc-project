@@ -1,9 +1,9 @@
-#define n 1000
+#define n 5000
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
-#include <omp.h>
+#include <cuda.h>
 
 void ref(double (*a)[n], double (*b)[n], double (*c)[n])
 {
@@ -25,13 +25,16 @@ void mod(double (*a)[n], double (*b)[n], double (*c)[n])
 
 int main(int argc, char **argv)
 {
-    int i, j, k;
+    int i, j;
     double maxError = 0.0;
+    cudaEvent_t start_cpu, stop_cpu, start_gpu, stop_gpu; 
+    float elapsed_time_ms;
 
-    double (*a)[n] = malloc(sizeof(double[n][n]));
-    double (*b)[n] = malloc(sizeof(double[n][n]));
-    double (*c)[n] = malloc(sizeof(double[n][n]));
-    double (*c_ref)[n] = malloc(sizeof(double[n][n]));
+
+    double (*a)[n] = (double (*)[n]) malloc(sizeof(double[n][n]));
+    double (*b)[n] = (double (*)[n]) malloc(sizeof(double[n][n]));
+    double (*c)[n] = (double (*)[n]) malloc(sizeof(double[n][n]));
+    double (*c_ref)[n] = (double (*)[n]) malloc(sizeof(double[n][n]));
 
     for (i = 0; i < n; i++)
         for (j = 0; j < n; j++)
@@ -41,13 +44,29 @@ int main(int argc, char **argv)
             c[i][j] = 0.0;
             c_ref[i][j] = 0.0;
         }
+
+    cudaEventCreate( &start_cpu);
+    cudaEventCreate( &stop_cpu ); 
+    cudaEventCreate( &start_gpu);
+    cudaEventCreate( &stop_gpu );
+
+    cudaEventRecord( start_cpu, 0 );
+
     ref(a, b, c_ref);
 
-    double start_time = omp_get_wtime();
+    cudaEventRecord( stop_cpu, 0 );
+    cudaEventSynchronize( stop_cpu );
+    cudaEventElapsedTime( &elapsed_time_ms, start_cpu, stop_cpu );
+    printf("Time CPU: %f ms.\n", elapsed_time_ms);
+
+    cudaEventRecord( start_gpu, 0 );
 
     mod(a, b, c);
 
-    double run_time = omp_get_wtime() - start_time;
+    cudaEventRecord( stop_gpu, 0 ); 
+    cudaEventSynchronize( stop_gpu );
+    cudaEventElapsedTime( &elapsed_time_ms, start_gpu, stop_gpu );
+    printf("Time GPU: %f ms.\n", elapsed_time_ms);
 
     for (i = 0; i < n; i++)
     {
@@ -61,10 +80,6 @@ int main(int argc, char **argv)
         printf("Problem! The Max Error of %.5f is NOT within acceptable bounds.\n", maxError);
     else
         printf("The Max Error of %.5f is within acceptable bounds.\n", maxError);
-
-    printf("Matrixmul computation in %f seconds\n", run_time);
-
-
 
     free(a);
     free(b);
