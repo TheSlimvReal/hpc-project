@@ -88,3 +88,44 @@ Even faster
 ```C
 #pragma omp parallel for default(none) private(i, j, k) firstprivate(a, b) shared(c)
 ```
+
+
+## CUDA
+
+First iteration approach similar to CUDA homework (C reference implementation)
+```C
+my_arr *a_dev, *b_dev, *c_dev;
+cudaMalloc((void **)&a_dev, arr_size);
+cudaMalloc((void **)&b_dev, arr_size);
+cudaMalloc((void **)&c_dev, arr_size);
+cudaMemcpy(a_dev, a, arr_size, cudaMemcpyHostToDevice);
+cudaMemcpy(b_dev, b, arr_size, cudaMemcpyHostToDevice);
+cudaMemcpy(c_dev, c, arr_size, cudaMemcpyHostToDevice);
+
+mod<<<1, 1>>>(a_dev, b_dev, c_dev);
+
+cudaMemcpy(c, c_dev, arr_size, cudaMemcpyDeviceToHost);
+
+//...
+
+__global__ void mod(my_arr *a, my_arr *b, my_arr *c)
+{
+    int i, j, k;
+    for (i = 0; i < n; ++i)
+        for (j = 0; j < n; ++j)
+            for (k = 0; k < n; k++)
+                c[i][j] += a[i][k] * b[k][j];
+}
+```
+
+Compiled with 
+
+> nvcc -arch=sm_75 ./matrixmul.cu 
+
+Result:
+
+```
+N=1000
+Time CPU: 3239.883057 ms.
+Time GPU: 201653.984375 ms.
+```
