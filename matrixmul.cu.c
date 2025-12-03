@@ -35,27 +35,20 @@ int main(int argc, char **argv)
     ref(a, b, c);
 
     double run_time = omp_get_wtime() - start_time;
+    
+    printf("%d\n\n", n);
+    for (int i = 0; i < 100; i++)
+    {
+        for (int j = 0; j < 100; j++)
+        {
+            printf("%.0f ", c[i][j]);
+        }
+        printf("\n");
+    }
 
     printf("Matrixmul computation in %f seconds\n", run_time);
 
-    FILE *f = fopen("mat-res.txt", "w");
-    if (!f)
-    {
-        perror("fopen");
-        return 1;
-    }
 
-    fprintf(f, "%d\n\n", n);
-    for (int i = 0; i < 1000; i++)
-    {
-        for (int j = 0; j < 1000; j++)
-        {
-            fprintf(f, "%.0f ", c[i][j]);
-        }
-        fprintf(f, "\n");
-    }
-
-    fclose(f);
 
     free(a);
     free(b);
