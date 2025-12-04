@@ -1,4 +1,5 @@
 #define n 1000
+#define TILE_SIZE 32
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -19,11 +20,48 @@ void ref(arr *a, arr *b, arr *c)
 
 __global__ void mod(arr *a, arr *b, arr *c)
 {
-    int i = blockIdx.x;
-    int j = blockIdx.y * blockDim.x + threadIdx.x;
-    if (i >= n | j >= n ) return;
-    for (int k = 0; k < n; k++)
-        c[i][j] += a[i][k] * b[k][j];
+    int m, k;
+    int row = threadIdx.y;
+    int col = threadIdx.x;
+    int globalRow = blockIdx.y * blockDim.y + threadIdx.y;
+    int globalCol = blockIdx.x * blockDim.x + threadIdx.x;
+
+    double c_tmp = 0.0;
+    // 64kb shared memory per multiprocessor: sizeof(double) * 32 * 32 * 2 = 16kb
+    __shared__ double shared_a[TILE_SIZE][TILE_SIZE];
+    __shared__ double shared_b[TILE_SIZE][TILE_SIZE];
+
+    // loop over the tiles of the input matrices
+    for (m = 0; m < (n - 1) / TILE_SIZE + 1; m++)
+    {
+        // load data from matrices into shared memory
+        if ((m * TILE_SIZE + col) < n) {
+            shared_a[row][col] = a[globalRow][m * TILE_SIZE + col];
+        } else {
+            // setting to 0 in case indices are out of bounds
+            shared_a[row][col] = 0.0f;
+        }
+        if ((m * TILE_SIZE + row) < n) 
+        {
+            shared_b[row][col] = b[(m * TILE_SIZE + row)][globalCol];
+        } else 
+        {
+            shared_b[row][col] = 0.0;
+        }
+        // synchronize to ensure all threads have loaded their elements
+        __syncthreads();
+
+        // add results of current tile
+        for (k = 0; k < TILE_SIZE; k++)
+            c_tmp += shared_a[row][k] * shared_b[k][col];
+
+        // synchronize to ensure all threads have completed the computation
+        __syncthreads();
+    }
+
+    // Write the result to global memory
+    if (globalRow < n && globalCol < n)
+        c[globalRow][globalCol] = c_tmp;
 }
 
 int main(int argc, char **argv)
@@ -45,7 +83,6 @@ int main(int argc, char **argv)
         {
             a[i][j] = 2.0;
             b[i][j] = 3.0;
-            c[i][j] = 0.0;
             c_ref[i][j] = 0.0;
         }
 
@@ -64,8 +101,8 @@ int main(int argc, char **argv)
     cudaMemcpy(b_dev, b, size, cudaMemcpyHostToDevice);
     cudaMemcpy(c_dev, c, size, cudaMemcpyHostToDevice);
 
-    dim3 threads(128);
-    dim3 blocks(n, (n-1) / threads.x + 1);
+    dim3 threads(TILE_SIZE, TILE_SIZE);
+    dim3 blocks((n-1) / threads.x + 1, (n-1) / threads.y + 1);
     mod<<<blocks, threads>>>(a_dev, b_dev, c_dev);
 
     cudaMemcpy(c, c_dev, size, cudaMemcpyDeviceToHost);
