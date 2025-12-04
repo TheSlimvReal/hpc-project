@@ -126,6 +126,79 @@ Result:
 
 ```
 N=1000
-Time CPU: 3239.883057 ms.
 Time GPU: 201653.984375 ms.
+Time CPU: 3239.883057 ms.
 ```
+
+Second iteration 
+
+```C
+    dim3 threads(32, 32);
+    dim3 blocks((n-1) / threads.x + 1, (n-1) / threads.y + 1);
+    mod<<<blocks, threads>>>(a_dev, b_dev, c_dev);
+
+    //...
+
+__global__ void mod(my_arr *a, my_arr *b, my_arr *c)
+{
+    int i = blockIdx.x * blockDim.x + threadIdx.x;
+    int j = blockIdx.y * blockDim.y + threadIdx.y;
+    if (i >= n | j >= n ) return;
+    for (int k = 0; k < n; k++)
+        c[i][j] += a[i][k] * b[k][j];
+}
+```
+nvprof
+```
+/content# nvprof ./a.out 
+==1611== NVPROF is profiling process 1611, command: ./a.out
+Time GPU: 3994.812744 ms.
+==1611== Profiling application: ./a.out
+==1611== Profiling result:
+            Type  Time(%)      Time     Calls       Avg       Min       Max  Name
+ GPU activities:   90.90%  3.62948s         1  3.62948s  3.62948s  3.62948s  mod(double[7000]*, double[7000]*, double[7000]*)
+                    6.90%  275.68ms         3  91.895ms  91.301ms  92.514ms  [CUDA memcpy HtoD]
+                    2.20%  87.719ms         1  87.719ms  87.719ms  87.719ms  [CUDA memcpy DtoH]
+```
+register
+```
+/content# nvcc -arch=sm_75 -Xptxas="-v" ./matrixmul.cu 
+ptxas info    : 0 bytes gmem
+ptxas info    : Compiling entry function '_Z3modPA7000_dS0_S0_' for 'sm_75'
+ptxas info    : Function properties for _Z3modPA7000_dS0_S0_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 22 registers, 376 bytes cmem[0]
+```
+
+```
+N=1000
+Time GPU: 192.292511 ms.
+Time CPU: 4307.398438 ms.
+
+N=5000
+Time GPU: 9942.131836 ms.
+Time CPU: 443797.250000 ms.
+```
+size n=5000
+| dim| time|
+|---|---|
+| 32x32 | 9942 |
+| 1024x1 | 72698 |
+| 1x1024| 1857 |
+| 1x512| 1696 |
+| 1x256| 1627 |
+
+n=7000
+
+|dim |time|
+|---|---|
+|1x32| 6694|
+|1x64| 4081|
+|1x128| 3982|
+|1x256| 4323|
+|1x512 | 4364|
+|1x1024| 4665|
+|2x128| 4011|
+|2x256| 4348|
+|4x256| 6917|
+|2x512| 4386|

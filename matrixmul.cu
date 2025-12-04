@@ -6,24 +6,24 @@
 #include <cuda.h>
 
 // custom type do allow double subscription (e.g. a[x][y])
-typedef double my_arr[n];
+typedef double arr[n];
 
-void ref(my_arr *a, my_arr *b, my_arr *c)
+void ref(arr *a, arr *b, arr *c)
 {
     int i, j, k;
-    for (i = 0; i < n; ++i)
+    for (i = 0; i < n; i++)
         for (k = 0; k < n; k++)
-            for (j = 0; j < n; ++j)
+            for (j = 0; j < n; j++)
                 c[i][j] += a[i][k] * b[k][j];
 }
 
-__global__ void mod(my_arr *a, my_arr *b, my_arr *c)
+__global__ void mod(arr *a, arr *b, arr *c)
 {
-    int i, j, k;
-    for (i = 0; i < n; ++i)
-        for (j = 0; j < n; ++j)
-            for (k = 0; k < n; k++)
-                c[i][j] += a[i][k] * b[k][j];
+    int i = blockIdx.x;
+    int j = blockIdx.y * blockDim.x + threadIdx.x;
+    if (i >= n | j >= n ) return;
+    for (int k = 0; k < n; k++)
+        c[i][j] += a[i][k] * b[k][j];
 }
 
 int main(int argc, char **argv)
@@ -32,13 +32,13 @@ int main(int argc, char **argv)
     double maxError = 0.0;
     cudaEvent_t start_cpu, stop_cpu, start_gpu, stop_gpu;
     float elapsed_time_ms;
-    size_t arr_size = n * n * sizeof(double);
+    size_t size = n * n * sizeof(double);
 
-    my_arr *a, *b, *c, *c_ref;
-    a = (my_arr *)malloc(arr_size);
-    b = (my_arr *)malloc(arr_size);
-    c = (my_arr *)malloc(arr_size);
-    c_ref = (my_arr *)malloc(arr_size);
+    arr *a, *b, *c, *c_ref;
+    a = (arr *) malloc(size);
+    b = (arr *) malloc(size);
+    c = (arr *) malloc(size);
+    c_ref = (arr *) malloc(size);
 
     for (i = 0; i < n; i++)
         for (j = 0; j < n; j++)
@@ -54,6 +54,27 @@ int main(int argc, char **argv)
     cudaEventCreate(&start_gpu);
     cudaEventCreate(&stop_gpu);
 
+    cudaEventRecord(start_gpu, 0);
+
+    arr *a_dev, *b_dev, *c_dev;
+    cudaMalloc((void **) &a_dev, size);
+    cudaMalloc((void **) &b_dev, size);
+    cudaMalloc((void **) &c_dev, size);
+    cudaMemcpy(a_dev, a, size, cudaMemcpyHostToDevice);
+    cudaMemcpy(b_dev, b, size, cudaMemcpyHostToDevice);
+    cudaMemcpy(c_dev, c, size, cudaMemcpyHostToDevice);
+
+    dim3 threads(128);
+    dim3 blocks(n, (n-1) / threads.x + 1);
+    mod<<<blocks, threads>>>(a_dev, b_dev, c_dev);
+
+    cudaMemcpy(c, c_dev, size, cudaMemcpyDeviceToHost);
+
+    cudaEventRecord(stop_gpu, 0);
+    cudaEventSynchronize(stop_gpu);
+    cudaEventElapsedTime(&elapsed_time_ms, start_gpu, stop_gpu);
+    printf("Time GPU: %f ms.\n", elapsed_time_ms);
+
     cudaEventRecord(start_cpu, 0);
 
     ref(a, b, c_ref);
@@ -62,25 +83,6 @@ int main(int argc, char **argv)
     cudaEventSynchronize(stop_cpu);
     cudaEventElapsedTime(&elapsed_time_ms, start_cpu, stop_cpu);
     printf("Time CPU: %f ms.\n", elapsed_time_ms);
-
-    cudaEventRecord(start_gpu, 0);
-
-    my_arr *a_dev, *b_dev, *c_dev;
-    cudaMalloc((void **)&a_dev, arr_size);
-    cudaMalloc((void **)&b_dev, arr_size);
-    cudaMalloc((void **)&c_dev, arr_size);
-    cudaMemcpy(a_dev, a, arr_size, cudaMemcpyHostToDevice);
-    cudaMemcpy(b_dev, b, arr_size, cudaMemcpyHostToDevice);
-    cudaMemcpy(c_dev, c, arr_size, cudaMemcpyHostToDevice);
-
-    mod<<<1, 1>>>(a_dev, b_dev, c_dev);
-
-    cudaMemcpy(c, c_dev, arr_size, cudaMemcpyDeviceToHost);
-
-    cudaEventRecord(stop_gpu, 0);
-    cudaEventSynchronize(stop_gpu);
-    cudaEventElapsedTime(&elapsed_time_ms, start_gpu, stop_gpu);
-    printf("Time GPU: %f ms.\n", elapsed_time_ms);
 
     for (i = 0; i < n; i++)
     {
