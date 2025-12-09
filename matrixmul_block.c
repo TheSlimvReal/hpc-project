@@ -8,6 +8,7 @@
 int main(int argc, char **argv)
 {
    int i, j, k;
+   int ii, jj, kk;
 
    double(*a) = malloc(sizeof(double[n * n]));
    double(*b) = malloc(sizeof(double[n * n]));
@@ -22,11 +23,14 @@ int main(int argc, char **argv)
       }
   
    double start_time = omp_get_wtime();
-
-   for (i = 0; i < n; ++i)
-      for (k = 0; k < n; k++)
-         for (j = 0; j < n; ++j)
-            c[i * n + j] += a[i * n + k] * b[k * n + j];
+   int block = 16;
+   for (ii = 0; ii < n; ii+=block)
+      for (kk = 0; kk < n; kk+=block)
+         for (jj=0; jj < n; jj+= block )
+            for (i = ii; i < ii+block; ++i)
+               for (k =kk; k < kk+block; k++)
+                  for (j = jj; j < jj+block; ++j)
+                     c[i * n + j] += a[i * n + k] * b[k * n + j];
 
    double run_time = omp_get_wtime() - start_time;
 
